@@ -1,3 +1,4 @@
 push
 repush
 kube test
+reconfig test
