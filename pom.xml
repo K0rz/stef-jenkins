@@ -48,8 +48,6 @@
     <connection>scm:git:https://github.com/yoba730/ajc-jenkins.git</connection>
     <developerConnection>scm:https://github.com/yoba730/ajc-jenkins.git</developerConnection>
     <url>https://https://github.com/yoba730/ajc-jenkins</url>
-    <developerConnection>scm:git:https://github.com/yoba730/ajc-jenkins.git</developerConnection>
-    <url>https://github.com/yoba730/ajc-jenkins</url>
   </scm>
 
   <properties>
