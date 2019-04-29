@@ -5,5 +5,4 @@ push
 repush
 kube test
 reconfig test 2
->>>>>>> 980df67a395dd3d857d6e01153e3b04f3db0ff6f
 test
