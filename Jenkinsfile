@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+node {
+    stage('Checkout'){
+        git branch: 'develop', url: 'https://github.com/virtus1er/ajc-jenkins.git'  
+    }    
+    stage('build'){
+        withMaven( maven: 'mav', jdk: 'jdk8' ){
+            sh "mvn clean verify"
+        }
+        step([$class: 'JUnitResultArchiver', testResults: 'target/surefire-reports/*.xml'])
+        step([$class: 'JUnitResultArchiver', testResults: 'target/failsafe-reports/*.xml'])
+    
+        dir('target'){
+            archive '*.jar'
+        }
+        stash name : 'binary', includes : 'target/*.jar'
+    }
+=======
 #!/usr/bin/env groovy
 
 properties([
@@ -87,4 +105,5 @@ if ('master'.equals(currentBranch)) {
         (release?.nextVersion?.trim() ? " -DdevelopmentVersion=" + release.nextVersion : '')
     }
   }
+>>>>>>> 980df67a395dd3d857d6e01153e3b04f3db0ff6f
 }
